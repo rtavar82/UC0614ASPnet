@@ -1,0 +1,19 @@
+
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_ADMIN_NAME",
+    "Administrador",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_ADMIN_EMAIL",
+    "admin@uc0614.pt",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_ADMIN_PASSWORD",
+    "Admin123!",
+    "User"
+)

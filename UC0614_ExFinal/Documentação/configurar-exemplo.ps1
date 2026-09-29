@@ -1,0 +1,65 @@
+# SQL Server
+[Environment]::SetEnvironmentVariable(
+    "UC0614_DB_CONNECTION",
+    "Data Source=localhost;Initial Catalog=UC0614_ExFinal;Integrated Security=True;Encrypt=False;",
+    "User"
+)
+
+# Administrador inicial
+[Environment]::SetEnvironmentVariable(
+    "UC0614_ADMIN_NAME",
+    "Administrador",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_ADMIN_EMAIL",
+    "admin@uc0614.pt",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_ADMIN_PASSWORD",
+    "Admin123!",
+    "User"
+)
+
+
+# SMTP
+[Environment]::SetEnvironmentVariable(
+    "UC0614_SMTP_USER",
+    "EMAIL_A_CONFIGURAR",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_SMTP_PASSWORD",
+    "PASSWORD_A_CONFIGURAR",
+    "User"
+)
+
+# Google
+[Environment]::SetEnvironmentVariable(
+    "UC0614_GOOGLE_CLIENT_ID",
+    "CLIENT_ID_A_CONFIGURAR",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_GOOGLE_CLIENT_SECRET",
+    "CLIENT_SECRET_A_CONFIGURAR",
+    "User"
+)
+
+# Facebook
+[Environment]::SetEnvironmentVariable(
+    "UC0614_FACEBOOK_APP_ID",
+    "APP_ID_A_CONFIGURAR",
+    "User"
+)
+
+[Environment]::SetEnvironmentVariable(
+    "UC0614_FACEBOOK_APP_SECRET",
+    "APP_SECRET_A_CONFIGURAR",
+    "User"
+)

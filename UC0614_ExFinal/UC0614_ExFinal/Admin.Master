@@ -1,0 +1,70 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> | Administração UC0614</title>
+
+    <link href="Content/uc0614.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder
+        ID="HeadContent"
+        runat="server" />
+</head>
+
+<body>
+
+    <form runat="server" class="admin-body">
+
+        <aside class="admin-menu">
+
+            <a class="admin-marca" href="AdminUsers.aspx">
+                UC0614
+                <span>Administração</span>
+            </a>
+
+            <p class="admin-legenda">GESTÃO</p>
+
+            <a class="admin-link ativo" href="AdminUsers.aspx">
+                Utilizadores
+            </a>
+
+            <a class="admin-link" href="AdminCreateUser.aspx">
+                Inserir utilizador
+            </a>
+
+            <p class="admin-legenda">CONTA</p>
+
+            <a class="admin-link" href="ChangePassword.aspx">
+                Alterar palavra-passe
+            </a>
+
+            <a class="admin-voltar" href="Default.aspx">
+                ← Voltar ao FrontEnd
+            </a>
+
+        </aside>
+
+        <section class="admin-conteudo">
+
+            <header class="admin-topo">
+                <p>Área reservada</p>
+                <strong>Administrador</strong>
+            </header>
+
+            <main class="admin-principal">
+
+                <asp:ContentPlaceHolder
+                    ID="MainContent"
+                    runat="server" />
+
+            </main>
+
+        </section>
+
+    </form>
+
+</body>
+</html>

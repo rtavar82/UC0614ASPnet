@@ -1,0 +1,458 @@
+:root {
+    --azul-escuro: #102a43;
+    --azul: #1769aa;
+    --fundo: #f4f7fb;
+    --texto: #243b53;
+    --linha: #d9e2ec;
+    --erro: #b42318;
+    --sucesso: #027a48;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR
+   ========================================================= */
+
+.barra {
+    min-height: 68px;
+    align-items: center;
+    background: var(--azul-escuro);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.marca {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .marca span {
+        font-weight: 400;
+        opacity: .8;
+    }
+
+.menu a {
+    color: #d9e2ec;
+    margin-left: 22px;
+    text-decoration: none;
+}
+
+    .menu a:hover {
+        color: #fff;
+    }
+
+.menu-utilizador {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 22px;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.conteudo {
+    margin: auto;
+    max-width: 1080px;
+    min-height: calc(100vh - 128px);
+    padding: 48px 24px;
+}
+
+.rodape {
+    background: #fff;
+    border-top: 1px solid var(--linha);
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    background: linear-gradient( 135deg, var(--azul-escuro), var(--azul) );
+    border-radius: 16px;
+    color: #fff;
+    padding: 40px;
+}
+
+    .hero h1 {
+        margin-top: 0;
+    }
+
+
+/* =========================================================
+   CARTÕES
+   ========================================================= */
+
+.cartao {
+    background: #fff;
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(16, 42, 67, .08);
+    margin: 28px auto;
+    max-width: 560px;
+    padding: 32px;
+}
+
+    .cartao.largo {
+        max-width: 100%;
+    }
+
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 18px 0 6px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+select {
+    border: 1px solid #bcccdc;
+    border-radius: 7px;
+    font: inherit;
+    padding: 11px 12px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOTÕES NORMAIS
+   ========================================================= */
+
+.botao,
+input[type=submit] {
+    background: var(--azul);
+    border: 0;
+    border-radius: 7px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .botao:hover,
+    input[type=submit]:hover {
+        background: #12598f;
+    }
+
+
+/* =========================================================
+   TEXTOS E MENSAGENS
+   ========================================================= */
+
+.texto-ajuda {
+    color: #627d98;
+    font-size: .92rem;
+}
+
+.aviso {
+    background: #fffaeb;
+    border-left: 4px solid #f79009;
+    padding: 16px;
+}
+
+.mensagem-erro {
+    color: var(--erro);
+}
+
+.mensagem-sucesso {
+    color: var(--sucesso);
+}
+
+
+/* =========================================================
+   TABELA
+   ========================================================= */
+
+.tabela {
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 20px;
+    width: 100%;
+}
+
+    .tabela th,
+    .tabela td {
+        border-bottom: 1px solid var(--linha);
+        padding: 12px;
+        text-align: left;
+    }
+
+    .tabela th {
+        background: #eaf2f8;
+    }
+
+
+/* =========================================================
+   LOGIN SOCIAL
+   ========================================================= */
+
+.separador {
+    align-items: center;
+    color: #64748b;
+    display: flex;
+    gap: .75rem;
+    margin: 1.25rem 0;
+}
+
+    .separador::before,
+    .separador::after {
+        background: #d7e1ec;
+        content: "";
+        flex: 1;
+        height: 1px;
+    }
+
+
+/* Google */
+
+input.botao-social {
+    background: #ffffff;
+    border: 1px solid #b9c8d8;
+    color: #1f3550;
+    cursor: pointer;
+    margin-top: .65rem;
+    width: 100%;
+}
+
+    input.botao-social:hover {
+        background: #e8f0f7;
+        border-color: #8fa7bd;
+        color: #102a43;
+    }
+
+
+    /* Facebook */
+
+    input.botao-social.botao-facebook {
+        background: #1877f2;
+        border-color: #1877f2;
+        color: #ffffff;
+    }
+
+        input.botao-social.botao-facebook:hover {
+            background: #0b4f9f;
+            border-color: #0b4f9f;
+            color: #ffffff;
+        }
+
+
+/* =========================================================
+   RESPONSIVO FRONTEND
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .barra {
+        display: block;
+        padding: 16px;
+    }
+
+    .menu {
+        margin-top: 12px;
+    }
+
+        .menu a {
+            margin: 0 16px 0 0;
+        }
+
+    .conteudo {
+        padding: 28px 16px;
+    }
+
+    .hero {
+        padding: 28px;
+    }
+}
+
+
+/* =========================================================
+   ADMINISTRAÇÃO
+   ========================================================= */
+
+.admin-body {
+    background: #f4f7fb;
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-menu {
+    background: #102a43;
+    color: #d9e2ec;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    min-height: 100vh;
+    padding: 30px 18px;
+    width: 245px;
+}
+
+.admin-marca {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 12px 42px;
+    text-decoration: none;
+}
+
+    .admin-marca span {
+        display: block;
+        font-size: .85rem;
+        font-weight: 400;
+        margin-top: 5px;
+        opacity: .75;
+    }
+
+.admin-legenda {
+    color: #829ab1;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin: 20px 12px 8px;
+}
+
+.admin-link,
+.admin-voltar {
+    border-radius: 7px;
+    color: #d9e2ec;
+    margin: 2px 0;
+    padding: 11px 12px;
+    text-decoration: none;
+}
+
+    .admin-link:hover,
+    .admin-link.ativo {
+        background: #243b53;
+        color: #fff;
+    }
+
+.admin-voltar {
+    border-top: 1px solid #334e68;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.admin-conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-topo {
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid var(--linha);
+    display: flex;
+    justify-content: flex-end;
+    min-height: 68px;
+    padding: 0 42px;
+}
+
+    .admin-topo p {
+        color: #627d98;
+        margin-right: 12px;
+    }
+
+.admin-principal {
+    margin: auto;
+    max-width: 1180px;
+    padding: 42px;
+}
+
+    .admin-principal .cartao {
+        margin: 0;
+        max-width: none;
+    }
+
+
+/* =========================================================
+   RESPONSIVO ADMIN
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .admin-body {
+        display: block;
+    }
+
+    .admin-menu {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .admin-marca {
+        margin-bottom: 16px;
+    }
+
+    .admin-conteudo {
+        width: 100%;
+    }
+
+    .admin-principal {
+        padding: 24px 16px;
+    }
+
+    .admin-topo {
+        padding: 0 16px;
+    }
+}
+
+/* =========================================================
+   CORREÇÃO FINAL - BOTÕES GOOGLE / FACEBOOK
+   ========================================================= */
+
+input[type="submit"].botao-social {
+    width: 100% !important;
+    margin-top: .65rem !important;
+    cursor: pointer !important;
+}
+
+    /* GOOGLE */
+    input[type="submit"].botao-social:not(.botao-facebook) {
+        background: #1877f2 !important;
+        border: 1px solid #1877f2 !important;
+        color: #ffffff !important;
+    }
+
+        input[type="submit"].botao-social:not(.botao-facebook):hover {
+            background: #0a4d9b !important;
+            border: 1px solid #0a4d9b !important;
+            color: #ffffff !important;
+        }
+
+    /* FACEBOOK */
+    input[type="submit"].botao-social.botao-facebook {
+        background: #1877f2 !important;
+        border: 1px solid #1877f2 !important;
+        color: #ffffff !important;
+    }
+
+        input[type="submit"].botao-social.botao-facebook:hover {
+            background: #0a4d9b !important;
+            border: 1px solid #0a4d9b !important;
+            color: #ffffff !important;
+        }
